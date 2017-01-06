@@ -1,15 +1,7 @@
 # learn-frontend WEB前端学习笔记
 ##第一课 HTML基础
 ![测试图片](https://github.com/kuju/learn-frontend/blob/master/ScreenImg/test.png?raw=true "Test Img")
-`
-     /**
-     *  
-     * @param $bonus_total 红包总额
-     * @param $bonus_count 红包个数
-     * @param $bonus_max 每个小红包的最大额
-     * @param $bonus_min 每个小红包的最小额
-     * @return 存放生成的每个小红包的值的一维数组
-     */  
+` 
     function getBonus($bonus_total, $bonus_count, $bonus_max, $bonus_min) {  
         $result = array();  
  
