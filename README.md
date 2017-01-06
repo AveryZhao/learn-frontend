@@ -106,7 +106,6 @@
     var_dump($result_bonus);
     //统计每个钱数的红包数量，检查是否接近正态分布
     ksort($arr);
-    var_dump($arr);
-
-
+    var_dump($arr);
+    ```
 #其他内容
