@@ -1,7 +1,39 @@
 # learn-frontend WEB前端学习笔记
 ##第一课 HTML基础
 ![测试图片](https://github.com/kuju/learn-frontend/blob/master/ScreenImg/test.png?raw=true "Test Img")
-` 
+
+`代码区块`
+
+
+```php
+<?php
+    /**
+     * 求一个数的平方
+     * @param $n
+     */
+    function sqr($n){
+        return $n*$n;
+    }
+
+    /**
+    * 生产min和max之间的随机数，但是概率不是平均的，从min到max方向概率逐渐加大。
+    * 先平方，然后产生一个平方值范围内的随机数，再开方，这样就产生了一种“膨胀”再“收缩”的效果。
+    */  
+    function xRandom($bonus_min,$bonus_max){
+        $sqr = intval(sqr($bonus_max-$bonus_min));
+        $rand_num = rand(0, ($sqr-1));
+        return intval(sqrt($rand_num));
+    }
+
+
+     /**
+     *  
+     * @param $bonus_total 红包总额
+     * @param $bonus_count 红包个数
+     * @param $bonus_max 每个小红包的最大额
+     * @param $bonus_min 每个小红包的最小额
+     * @return 存放生成的每个小红包的值的一维数组
+     */  
     function getBonus($bonus_total, $bonus_count, $bonus_max, $bonus_min) {  
         $result = array();  
  
@@ -52,4 +84,27 @@
         }  
         return $result;  
     }
-`
+    $bonus_total = 200;
+    $bonus_count = 100;
+    $bonus_max = 10;//此算法要求设置的最大值要大于平均值
+    $bonus_min = 1;
+    $result_bonus = getBonus($bonus_total, $bonus_count, $bonus_max, $bonus_min);
+    $total_money = 0;
+    $arr = array();
+    foreach ($result_bonus as $key => $value) {
+        $total_money += $value;
+        if(isset($arr[$value])){
+            $arr[$value] += 1;
+        }else{
+            $arr[$value] = 1;
+        }
+        
+    }
+    //输出总钱数，查看是否与设置的总数相同
+    echo $total_money;
+    //输出所有随机红包值
+    var_dump($result_bonus);
+    //统计每个钱数的红包数量，检查是否接近正态分布
+    ksort($arr);
+    var_dump($arr);
+    ```
