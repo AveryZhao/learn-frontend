@@ -1,6 +1,6 @@
 # learn-frontend WEB前端学习笔记
 ##第一课 HTML基础
-![测试图片](https://cl.ly/080F0i2K1m37/Image%202017-01-09%20at%208.22.02%20PM.png "Test Img")
+![测试图片](https://cl.ly/080F0i2K1m37/download/Image%202017-01-09%20at%208.22.02%20PM.png)
 
 `代码区块`
 
